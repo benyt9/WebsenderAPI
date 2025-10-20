@@ -9,9 +9,7 @@ const API_KEY = process.env.API_KEY || "blocktopia123";
 const users = {};
 
 // Healthcheck / Basis-URL
-app.get("/", (req, res) => {
-  res.send("🚀 BlockTopia API läuft!");
-});
+app.get("/", (req, res) => res.send("🚀 BlockTopia API läuft!"));
 
 // POST-Endpoint für Plugin-Updates
 app.post("/api/luckperms/update", (req, res) => {
