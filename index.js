@@ -2,7 +2,7 @@ import express from "express";
 const app = express();
 app.use(express.json());
 
-// API-Key für Sicherheit
+// API-Key für Sicherheit (kann über Railway Environment Variables geändert werden)
 const API_KEY = process.env.API_KEY || "blocktopia123";
 
 // Temporärer Speicher für User-Daten
