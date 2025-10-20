@@ -2,7 +2,7 @@ import express from "express";
 const app = express();
 app.use(express.json());
 
-// API-Key für Sicherheit (kann über Railway Environment Variables geändert werden)
+// API-Key (kann über Railway Environment Variables gesetzt werden)
 const API_KEY = process.env.API_KEY || "blocktopia123";
 
 // Temporärer Speicher für User-Daten
@@ -35,6 +35,6 @@ app.get("/api/luckperms/user/:name", (req, res) => {
   res.json(users[name]);
 });
 
-// Railway Port nutzen
+// ✅ WICHTIG: Railway Port verwenden
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`✅ API läuft auf Port ${PORT}`));
